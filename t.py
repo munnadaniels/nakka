@@ -7,8 +7,7 @@ arguments.add_argument("-i", "--id", dest="id", help="content id ")
 arguments.add_argument("-o", "--Name", dest="Name", help="quality") 
 args = arguments.parse_args()
 
-link = args.id
-filename = args.Name
+ 
 
 
 def trackname():
@@ -16,4 +15,6 @@ def trackname():
      output = f"{filename}"
      subprocess.run(['rclone', output,'Rose:'])
 
+link = str(args.id) 
+filename = str(args.Name)
 trackname()
