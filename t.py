@@ -3,11 +3,11 @@ import argparse
 import subprocess
 
 arguments = argparse.ArgumentParser()
-arguments.add_argument("-i", "--id", dest="index", help="content id ")
+arguments.add_argument("-i", "--id", dest="id", help="content id ")
 arguments.add_argument("-o", "--Name", dest="Name", help="quality") 
 args = arguments.parse_args()
 
-link = arg.index
+link = args.id
 filename = args.Name
 
 
