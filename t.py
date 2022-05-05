@@ -1,4 +1,4 @@
-import os, sys
+/r python import os, sys
 import argparse
 import subprocess
 
@@ -11,10 +11,10 @@ args = arguments.parse_args()
 
 
 def trackname():
-     os.system('ffmpeg -i {link} -map 0:v -map 0:a -map 0:s? -metadata title="@TROOPORIGINALS" -metadata:s:v title="TroopOriginals" -metadata:s:a title="TroopOriginals" -metadata:s:s title="TroopOriginals" -codec copy {filename}')
+     link = str(args.id) 
+     os.system('ffmpeg -i ℅s/{link} -map 0:v -map 0:a -map 0:s? -metadata title="@TROOPORIGINALS" -metadata:s:v title="TroopOriginals" -metadata:s:a title="TroopOriginals" -metadata:s:s title="TroopOriginals" -codec copy {filename}')
      output = f"{filename}"
      subprocess.run(['rclone', output,'Rose:'])
 
-link = str(args.id) 
 filename = str(args.Name)
 trackname()
