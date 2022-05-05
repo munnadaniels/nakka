@@ -13,8 +13,7 @@ filename = args.Name
 
 def trackname():
      os.system('ffmpeg -i {link} -map 0:v -map 0:a -map 0:s? -metadata title="@TROOPORIGINALS" -metadata:s:v title="TroopOriginals" -metadata:s:a title="TroopOriginals" -metadata:s:s title="TroopOriginals" -codec copy {filename}')
-     output = f"{FILENAME}"
-     subprocess.run(['rclone', output, {filename} ,'Rose:/jio'])
-
+     output = f"{filename}"
+     subprocess.run(['rclone', output,'Rose:'])
 
 trackname()
